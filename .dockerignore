@@ -1,0 +1,35 @@
+# Git and local metadata
+.git/
+.gitignore
+
+# Python cache and virtual envs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Editor settings
+.vscode/
+.idea/
+
+# Build outputs and test caches
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Project-generated artifacts
+artifacts/
+*.joblib
+*.pkl
+*.csv
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
