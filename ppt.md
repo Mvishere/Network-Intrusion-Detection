@@ -1,6 +1,7 @@
 # NSL-KDD Network Intrusion Detection — Presentation Blueprint
 
 This document is a complete, self-contained slide blueprint for building a presentation. Every slide includes exact layout, design, and on-slide content instructions so it can be handed directly to a PPT creation agent.
+Source notebook for all charts and metrics: `correlation_analysis.ipynb`.
 
 ## Global Deck Rules (apply to all slides)
 - Slide size: 16:9 widescreen.
@@ -113,7 +114,8 @@ This document is a complete, self-contained slide blueprint for building a prese
 
 **On-slide table (2 columns):**
 - `Metric | Result`
-- `Total missing values | 0 (or imputed if present)`
+- `Total missing values after preprocessing | 0`
+- `Imputation action | Not required (logic exists in notebook if nulls appear)`
 - `Duplicate rows | Removed if detected`
 - `Categorical columns | Encoded via one-hot`
 - `Numerical columns | Standardized`
