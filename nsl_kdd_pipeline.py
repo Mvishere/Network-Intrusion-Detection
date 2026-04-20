@@ -61,7 +61,7 @@ def random_oversample_train(X_train: pd.DataFrame, y_train: np.ndarray, random_s
 def evaluate_models(X_train, X_test, y_train, y_test, feature_set_name: str) -> pd.DataFrame:
     model_builders = {
         "Decision Tree": lambda: DecisionTreeClassifier(max_depth=20, random_state=42),
-        "AdaBoost": lambda: AdaBoostClassifier(n_estimators=100, random_state=42, algorithm="SAMME"),
+        "AdaBoost": lambda: AdaBoostClassifier(n_estimators=100, random_state=42),
         "Random Forest": lambda: RandomForestClassifier(
             n_estimators=200, max_depth=20, random_state=42, n_jobs=-1
         ),
@@ -161,7 +161,7 @@ def train_and_compare(top_n_features: int, output_dir: Path):
     if best_model_name == "Decision Tree":
         best_model = DecisionTreeClassifier(max_depth=20, random_state=42)
     elif best_model_name == "AdaBoost":
-        best_model = AdaBoostClassifier(n_estimators=100, random_state=42, algorithm="SAMME")
+        best_model = AdaBoostClassifier(n_estimators=100, random_state=42)
     else:
         best_model = RandomForestClassifier(n_estimators=200, max_depth=20, random_state=42, n_jobs=-1)
 
